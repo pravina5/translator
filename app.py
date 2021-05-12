@@ -5,7 +5,7 @@ from google_trans_new import google_translator
 
 translator = google_translator()
 
-app = Flask(__name__,template_folder='templates')
+app = Flask(__name__)
 
 @app.route('/')
 def home():
