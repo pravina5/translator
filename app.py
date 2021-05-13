@@ -14,7 +14,7 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    message = request.form['message']
+    message = request.form
             
     text_to_translate = translator.translate(message,dest='hi')
     text1 = text_to_translate.text
