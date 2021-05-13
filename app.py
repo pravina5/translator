@@ -1,6 +1,7 @@
 
 # Importing essential libraries
 from flask import Flask, render_template, request
+import requests
 from google_trans_new import google_translator
 
 translator = google_translator()
