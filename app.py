@@ -12,11 +12,11 @@ app = Flask(__name__)
 def home():
 	return render_template('apple.html')
 
-@app.route('/predict', methods=['GET','POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
-    message = request.form.get('message')
+    message = request.form['message']
             
-    text_to_translate = translator.translate(message, dest='hi')
+    text_to_translate = translator.translate(message,src='en',dest='hi')
     text = text_to_translate.text
     return render_template('apple.html', prediction=text)    
 
