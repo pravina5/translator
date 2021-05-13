@@ -16,10 +16,10 @@ def home():
 def predict():
     message = request.form['message']
             
-    text_to_translate = translator.translate(message,src='en',dest='hi')
+    text_to_translate = translator.translate(message,dest='hi')
     text = text_to_translate.text
-    return text
-    #return render_template('apple.html', prediction=text)
+    #return text
+    return render_template('apple.html', prediction=text)
 
 	
 
