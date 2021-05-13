@@ -18,8 +18,10 @@ def predict():
             
     text_to_translate = translator.translate(message,src='en',dest='hi')
     text = text_to_translate.text
-    return render_template('apple.html', prediction=text)    
+    return text
+    #return render_template('apple.html', prediction=text)
 
+	
 
 
 if __name__ == '__main__':
