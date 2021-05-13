@@ -17,7 +17,7 @@ def predict():
     message = request.form.get('message')
             
     text_to_translate = translator.translate(message, dest='hi')
-    text = text_to_translate
+    text = text_to_translate.text
     return render_template('apple.html', prediction=text)    
 
 
