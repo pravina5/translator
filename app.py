@@ -13,14 +13,13 @@ def home():
 	return render_template('apple.html')
 
 @app.route('/predict', methods=['POST'])
-def predict():
-	return "Hi this is your DJ host Jungkook!"
 '''def predict():
-    message = request.form
-            
-    text_to_translate = translator.translate(message,dest='hi')
-    text1 = text_to_translate.text
-    return render_template('apple.html', prediction=text1)'''
+	return "Hi this is your DJ host Jungkook!"   '''
+def predict():
+	message = request.form['message']
+	text_to_translate = translator.translate(message,src ='en',dest='hi')
+	text1 = text_to_translate.text
+	return render_template('apple.html', prediction=text1)
 
 	
 
