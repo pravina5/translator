@@ -1,5 +1,6 @@
 Flask==1.1.2
 pip==21.1.1
+google-trans-new==1.1.9
 googletrans==3.0.0
 requests==2.22.0
 gunicorn==20.0.4
